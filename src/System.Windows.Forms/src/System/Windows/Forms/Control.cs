@@ -2444,7 +2444,7 @@ example usage
         internal void ScaleFont(float factor) {
             Font local = (Font)Properties.GetObject(PropFont);
             Font resolved = Font;
-            Font newFont = new Font(this.Font.FontFamily, this.Font.Size * factor, this.Font.Style);
+            Font newFont = new Font(this.Font.FontFamily, this.Font.Size * factor, this.Font.Style, this.Font.Unit, this.Font.GdiCharSet, this.Font.GdiVerticalFont);
 
             if  ((local == null) || !local.Equals(newFont)) {
                 Properties.SetObject(PropFont, newFont);
